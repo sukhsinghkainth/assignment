@@ -1,4 +1,3 @@
-Here's a sample README template based on the provided requirements. Once you share your code, I can tailor it further.
 
 ---
 
