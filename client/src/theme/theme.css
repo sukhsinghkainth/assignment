@@ -1,0 +1,148 @@
+:root {
+    /* root */
+    --color-primary: #782891;
+    --color-secondary: #f1e9f4;
+    --color-error: #ff4d4f;
+    --color-text: #07123F;
+    --color-text-disabled: #bfbfbf;
+    --custom-border-radius: 7px;
+    --custom-control-height: 48px;
+
+    --error-box-shadow: #fff2f0 0px 0px 0px 1px, #fff2f0 0px 0px 0px 4px;
+    --custom-box-shadow: #f1e9f4 0px 0px 0px 1px, #f1e9f4 0px 0px 0px 4px;
+    --custom-font-size: 13px;
+    --custom-font-weight: 700;
+    --custom-line-height: 16px;
+
+    /* for all inputs line Input, Select, dropdown, multi-select etc. */
+    --custom-input-height: 48px;
+    --custom-input-padding: 12px 16px 12px 16px;
+    --custom-input-padding-top: 12px;
+    --custom-input-padding-right: 16px;
+    --custom-input-padding-bottom: 12px;
+    --custom-input-padding-left: 16px;
+
+    /* Gap between radio buttons */
+    --radio-gap: 10px;
+
+    /* multi-select tags */
+    --tag-text-color: #4f46e5;
+    --tag-background-color: #eef2ff;
+    --tag-padding: 4px 8px;
+    --tag-border: 1px solid #d3d3d3;
+    --tag-font-size: 11px;
+    --tag-font-weight: 700;
+    --tag-line-height: 14px;
+    --tag-gap: 5px;
+    --tag-close--icon-color: #000000;
+
+    /* button */
+    --button-background-color: #782891;
+    --button-text-color: #ffffff;
+    --button-border: 1px solid #782891;
+    --button-hover-background-color: #9445ab;
+    --button-hover-text-color: #ffffff;
+    --button-hover-border: 1px solid #782891;
+
+    /* Table */
+    --table-border-collapse: separate;
+    --table-border-spacing: 0px 6px;
+    --table-border-radius: 10px;
+
+    --table-header-background-color: #F3F4F6;
+    --table-header-height: 45px;
+    --table-header-font-size: 11px;
+    --table-header-line-height: 14px;
+    --table-header-font-weight: 700;
+
+    --table-font-size: 11px;
+    --table-line-height: 14px;
+    /* --table-font-weight: 700; */
+
+    --table-row-hover-color: #F9F9F9;
+    --table-cell-padding: 16px;
+
+    /* Pagination */
+    --pagination-justify-content: space-between;
+    --pagination-margin: 0 10px;
+    --pagination-item-border-radius: 5px;
+    --pagination-item-color: #bfbfbf;
+
+    --pagination-item-active-background-color: #C4D0DF;
+    --pagination-item-active-color: #ffffff;
+
+    --pagination-item-hover-background-color: #07123F;
+    --pagination-item-hover-color: #ffffff;
+
+    --pagination-item-prev-next-color: #95A4B7;
+    --pagination-item-prev-next-hover-color: #07123F;
+}
+
+/* Menu */
+.ant-menu-light.ant-menu-root:focus-visible {
+    outline: none !important;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+    padding: 2px 12px !important;
+}
+
+
+/* custom */
+.custom-button-hover {
+    background-color: #07123F !important;
+    border-color: #07123F !important;
+    color: #ffffff !important;
+}
+
+/* cancel-button */
+.custom-button-cancel {
+    border: none;
+    color: #07123F !important;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.custom-button-cancel:hover {
+    /* border: 1px solid #07123F !important; */
+    background-color: #f0f0f0 !important;
+    color: #07123F !important;
+}
+
+.custom-card>.ant-card .ant-card-body {
+    padding: 5px !important;
+    width: 100px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.breadcrumb-text-selected {
+    color: #07123F;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.breadcrumb-text {
+    color: #1A1A1A;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+.breadcrumb-text:hover {
+    /* background: #f0f0f0;
+    border-radius: 5px; */
+    cursor: pointer;
+}
+
+
+.button-stop-hover:hover {
+    border: none !important;
+}

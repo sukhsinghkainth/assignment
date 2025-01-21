@@ -1,0 +1,9 @@
+# Node.js
+node_modules/
+.env
+# Logs
+logs/
+*.log
+# Dependency directories
+node_modules/
+
