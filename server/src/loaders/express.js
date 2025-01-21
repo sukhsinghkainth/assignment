@@ -87,7 +87,7 @@ module.exports = (app) => {
         definition: {
             openapi: '3.0.0',
             info: {
-                title: 'API Documentation',
+                title: 'API Documentation For Searching Students',
                 version: '1.0.0',
             },
             components: {
