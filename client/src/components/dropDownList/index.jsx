@@ -1,10 +1,14 @@
 
 import React from 'react'
 
+const escapeRegExp = (string) => {
+    return string.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&');
+};
 
 const highlightMatch = (text, searchTerm) => {
     if (!searchTerm) return text;
-    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    const escaped = escapeRegExp(searchTerm)
+    const regex = new RegExp(`(${escaped})`, 'gi');
     return text.split(regex).map((part, index) =>
         regex.test(part) ? <span key={index} style={{ backgroundColor: '#ff0' }}>{part}</span> : part
     );

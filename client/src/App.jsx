@@ -5,7 +5,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     async lazy() {
-      let module = await import("./students/Students.jsx");
+      let module = await import("./students/Student.jsx");
       return { Component: module.default };
     },
   },

@@ -1,0 +1,57 @@
+.custom-select {
+    width: 100%;
+    font-weight: var(--custom-font-weight);
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    /* Remove the default Ant Design box shadow */
+}
+
+/* Change the background color and text color of the selected option */
+.ant-select-dropdown .ant-select-item-option-selected {
+    background-color: var(--color-secondary) !important;
+    /* Customize this color */
+    color: var(--selected-text-color) !important;
+    /* Customize this color */
+}
+
+/* Customize the padding, font size, and line height of the dropdown options */
+.ant-select-single .ant-select-selector .ant-select-selection-item {
+    padding: var(--custom-input-padding-top) calc(var(--custom-input-padding-right) - 11px) var(--custom-input-padding-bottom) calc(var(--custom-input-padding-left) - 11px) !important;
+    /* Customize the padding */
+    font-size: var(--custom-font-size);
+    /* Customize the font size */
+    line-height: var(--custom-line-height);
+    /* Customize the line height */
+    font-weight: var(--custom-font-weight);
+}
+
+.custom-select .ant-select-selection-placeholder {
+    padding: var(--custom-input-padding-top) calc(var(--custom-input-padding-right) - 11px) var(--custom-input-padding-bottom) calc(var(--custom-input-padding-left) - 11px) !important;
+    /* Customize the padding */
+    font-size: var(--custom-font-size);
+    /* Customize the font size */
+    line-height: var(--custom-line-height);
+    /* Customize the line height */
+    font-weight: var(--custom-font-weight);
+}
+
+.custom-select:hover .ant-select-selector,
+.custom-select:focus .ant-select-selector,
+.custom-select:active .ant-select-selector,
+.ant-select-focused .ant-select-selector {
+    box-shadow: var(--custom-box-shadow) !important;
+    /* Apply your custom box shadow */
+}
+
+.error .ant-select-selector {
+    color: var(--color-error) !important;
+    border-color: var(--color-error) !important;
+    box-shadow: none !important;
+}
+
+.error:hover .ant-select-selector,
+.error:focus .ant-select-selector,
+.error:active .ant-select-selector,
+.error:focus-within .ant-select-selector {
+    box-shadow: var(--error-box-shadow) !important;
+}

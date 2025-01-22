@@ -4,13 +4,23 @@ const studentApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         searchStudent: builder.query({
             query: (params) => ({
-                url: "/searchStudent",
+                url: "/searchStudents",
                 method: "GET",
                 params,
             }),
-            providesTags: ["Users"],
+        }),
+        getStudent: builder.query({
+            query: (params) => ({
+                url: "/student",
+                method: "GET",
+                params,
+            }),
+            providesTags: ["student"],
         }),
     }),
 });
 
-export const { useSearchStudentQuery } = studentApiSlice;
+export const {
+    useSearchStudentQuery,
+    useLazyGetStudentQuery
+} = studentApiSlice;

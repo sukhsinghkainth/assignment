@@ -3,8 +3,8 @@ import React from 'react'
 function StudentCard({ selectedStudent }) {
     return (
         <div>
-            <div class="card">
-                <div class="header">Student Information</div>
+            <div className="card">
+                <div className="header">Student Information</div>
                 <div className='info-container'>
                     <div className="info">
                         <span><strong>Name: </strong></span>

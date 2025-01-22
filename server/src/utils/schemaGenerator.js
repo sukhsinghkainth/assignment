@@ -10,8 +10,14 @@ const createSchema = (fields) => {
 
         // Add additional validations
         if (validations.required) {
-            schema[name] = schema[name].required();
+            if (validations.type == "string") {
+                schema[name] = schema[name].required().trim()
+            }
+            else {
+                schema[name] = schema[name].required();
+            }
         }
+
         if (validations.optional) {
             schema[name] = schema[name].optional();
         }

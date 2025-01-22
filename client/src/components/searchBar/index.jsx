@@ -8,7 +8,6 @@ function SearchBar({ handleSearchChange, handleFocus }) {
             onChange={handleSearchChange}
             onFocus={handleFocus}
             allowClear
-            autoFocus
         />
     )
 }
