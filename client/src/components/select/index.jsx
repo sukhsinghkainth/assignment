@@ -1,5 +1,5 @@
 import React from "react";
-import { Select } from "antd";
+import { AutoComplete } from "antd";
 import { Controller } from "react-hook-form";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import "./select.css";
@@ -13,40 +13,29 @@ const CustomSelect = ({
     placeholder = "Please select",
     showErrorIcon = true,
     style,
-    onChange,
-    handleSeacrh,
+    onSelect,
     value,
-    notFoundContent,
-    customError
+    handleSearch,
+    customError,
+    notFoundContent
 }) => {
     return (
         <Controller
             name={name}
             control={control}
             rules={rules}
-
             defaultValue={defaultValue || undefined}
             render={({ field, fieldState: { error } }) => (
                 <>
-                    <Select
+                    <AutoComplete
                         {...field}
-                        showSearch
-                        value={value || undefined}
-                        placeholder={placeholder}
-                        className={`custom-select  ${error ? "error" : ""}`}
+                        value={value}
                         options={options}
-                        filterOption={(input, option) => {
-                            return option.key.toLowerCase().includes(input.trim().toLowerCase());
-                        }}
                         style={style}
-                        onChange={(value) => {
-                            field.onChange(value);
-                            onChange && onChange(value);
-                        }}
-                        onSearch={handleSeacrh}
-                        allowClear={false}
+                        onSelect={onSelect}
+                        onSearch={handleSearch}
+                        placeholder={placeholder}
                         notFoundContent={notFoundContent}
-                        suffixIcon={null}
                     />
                     {(error || customError) && (
                         <span
