@@ -19,13 +19,12 @@ const CustomSelect = ({
     notFoundContent,
     customError
 }) => {
-
-
     return (
         <Controller
             name={name}
             control={control}
             rules={rules}
+
             defaultValue={defaultValue || undefined}
             render={({ field, fieldState: { error } }) => (
                 <>
@@ -37,7 +36,7 @@ const CustomSelect = ({
                         className={`custom-select  ${error ? "error" : ""}`}
                         options={options}
                         filterOption={(input, option) => {
-                            return option.key.toLowerCase().includes(input.toLowerCase());
+                            return option.key.toLowerCase().includes(input.trim().toLowerCase());
                         }}
                         style={style}
                         onChange={(value) => {
@@ -45,7 +44,7 @@ const CustomSelect = ({
                             onChange && onChange(value);
                         }}
                         onSearch={handleSeacrh}
-                        allowClear
+                        allowClear={false}
                         notFoundContent={notFoundContent}
                         suffixIcon={null}
                     />

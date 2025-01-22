@@ -5,6 +5,7 @@ import StudentCard from '../components/StudentCard';
 import Debounce from '../utils/Debounce';
 import CustomSelect from '../components/select';
 import { useForm } from 'react-hook-form';
+import highlightText from '../utils/HighLightText';
 
 const limit = 5
 const offset = 1
@@ -21,22 +22,6 @@ const Students = () => {
     );
     const [studentList, setStudentList] = useState([])
 
-
-    const highlightText = (text, search) => {
-        if (!search) return text;
-        const regex = new RegExp(`(${search})`, "gi");
-        const parts = text.split(regex);
-        const data = parts.map((part, index) =>
-            part.toLowerCase() === search.toLowerCase() ? (
-                <span key={index} style={{ backgroundColor: "#ffcc00", fontWeight: "bold" }}>
-                    {part}
-                </span>
-            ) : (
-                part
-            )
-        );
-        return data
-    };
 
     useEffect(() => {
         if (isSuccess) {
@@ -65,6 +50,7 @@ const Students = () => {
         try {
             const result = await trigger({ rollNumber }).unwrap()
             setSelectedStudent(result?.data);
+            setSearchTerm(result?.data?.name || ""); // Update searchTerm with selected name
         } catch (error) {
             console.log('error while fetching', error)
         }
