@@ -73,7 +73,10 @@ This single-page application (SPA) implements a search bar with lazy loading fun
     ```
 
 4. **API Endpoints**:
-    - `GET http://localhost:9000/api/v1/searchStudent?search=<term>`: Fetch students matching the search term.
+    - `GET http://localhost:9000/api/v1/searchStudents?search=<term>&limit=5&offset=1`:
+     Fetch students matching the search term with limit and offset.
+    - `GET http://localhost:9000/api/v1/student?rollNumber=<term>`
+        Fetch students matching the rollNumber.
     - `http://localhost:9000/api/v1/docs/` Swagger api URL 
 
 ## Usage
